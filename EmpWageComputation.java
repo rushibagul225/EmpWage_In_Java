@@ -1,22 +1,32 @@
 class EmpWageComputation {
 
-	public static void main(String args[]) {
-		// Declaring Constant
-		int IS_PART_TIME = 1;
-		int IS_FULL_TIME = 2;
-		int EMP_RATE_PER_HOUR = 20;
-		//Declaring Variable
-		int empHrs = 0;
-		int empWage = 0;
-		//Computing UC
-		int empCheck = (int) ( Math.random() * 10 ) % 3;
-		if ( empCheck == IS_PART_TIME )
-			empHrs = 4;
-		else if ( empCheck == IS_FULL_TIME )
-			empHrs = 8;
-		else
-			empHrs = 0;
-		empWage = empHrs * EMP_RATE_PER_HOUR;
-		System.out.println("Employee Wage: " + empWage);
+public static final int isFullTime = 1;
+        public static final int isPartTime = 2;
+	public static void main(String[] args) {
+	System.out.println("Welcome to Employee Wage ComputationProgram on Master Branch");
+		int empRatePrHr = 20;
+		int empHr = 0;
+		int perDaySalary = 0;
+		int empCheck=(int)Math.floor(Math.random() * 10) % 3;
+		System.out.println(empCheck);
+		switch ((int)empCheck)
+		{
+			case isFullTime :
+				empHr = 8;
+				System.out.println("Full time Employee");
+				perDaySalary = empRatePrHr * empHr;
+				System.out.println("Employee per day salary = "+perDaySalary);
+				break;
+			case isPartTime :
+				empHr = 4;
+				System.out.println("Part time Employee");
+				perDaySalary = empRatePrHr * empHr;
+				System.out.println("Employee per day salary = "+perDaySalary);
+				break;
+			default :
+				empHr = 0;
+				perDaySalary = 0;
+				System.out.println("Employee per day salary = "+perDaySalary);
+		}
 	}
 }
