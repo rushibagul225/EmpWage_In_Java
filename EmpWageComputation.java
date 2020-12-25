@@ -1,19 +1,17 @@
-public class EmpWageComputation
- {
-	public static void main(String args[]) 
-	{
-		// CONSTANTS
-		int IS_FULL_TIME = 1;
-		//COMPUTATION
-		int empCheck = (int) ( Math.random() * 10 ) % 2;
-		System.out.println(empCheck);
-		if ( empCheck == IS_FULL_TIME )
-		{
-			System.out.println( "Emplyee is Present" );
-		}
-		else
-		{
-			System.out.println( "Employee is Absent" );
-		} 
+public class EmpWageComputation {
+	public static void main(String[] args) {
+	System.out.println("Welcome to Employee Wage Computation");
+   	int isPresent = 1;
+	int empRatePrHr = 20;
+	int empHr = 8;
+    int empCheck=(int)Math.floor(Math.random() * 10) % 2;
+    System.out.println(empCheck);
+    if (empCheck == isPresent) {
+		System.out.println("employee is present");
+		int perDaySalary = empRatePrHr * empHr;
+		System.out.println("Employee per day salary = "+perDaySalary);
+	}
+    else
+		System.out.println("absent");
 	}
 }
